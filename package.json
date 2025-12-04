@@ -1,0 +1,9 @@
+{
+  "name": "bangka-sewa-mobil",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node dev-server.js",
+    "cms:proxy": "npx netlify-cms-proxy-server"
+  }
+}

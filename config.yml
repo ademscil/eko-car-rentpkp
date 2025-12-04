@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "cars"
+    label: "Armada"
+    files:
+      - name: "cars"
+        label: "Daftar Mobil"
+        file: "data/cars.json"
+        editor:
+          preview: false
+        fields:
+          - label: "Daftar Mobil"
+            name: "cars"
+            widget: "list"
+            summary: "{{fields.name}} - {{fields.price_display}}"
+            fields:
+              - { label: "Nama Mobil", name: "name", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Gambar", name: "image", widget: "string", hint: "URL atau /assets/armada/namafile.jpg" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+              - { label: "Transmisi", name: "transmission", widget: "string", required: false }
+              - { label: "Kapasitas", name: "capacity", widget: "string", required: false }
+              - { label: "Fitur Singkat", name: "feature", widget: "string", required: false }
+              - { label: "Harga Tampil", name: "price_display", widget: "string" }
+              - label: "Kategori Tampilan"
+                name: "categories"
+                widget: "select"
+                multiple: true
+                options:
+                  - { label: "Home", value: "home" }
+                  - { label: "Lepas Kunci", value: "lepas-kunci" }
+              - { label: "Teks WhatsApp", name: "whatsapp_text", widget: "string", required: false, hint: "Contoh: Halo saya ingin sewa Toyota Avanza" }
