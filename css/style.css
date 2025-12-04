@@ -183,6 +183,10 @@ img {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
+.nav .mobile-only {
+  display: none;
+}
+
 .nav a:hover,
 .nav a.active {
   background: rgba(10, 63, 150, 0.1);
@@ -278,7 +282,7 @@ main {
 }
 
 .hero-copy {
-  background: rgba(12, 31, 88, 0.82);
+  background: linear-gradient(90deg, rgba(12, 31, 88, 0) 0%, rgba(12, 31, 88, 0.9) 22%, rgba(12, 31, 88, 0.98) 50%, rgba(12, 31, 88, 0.9) 78%, rgba(12, 31, 88, 0) 100%);
   padding: 32px;
   border-radius: 6px;
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.2);
@@ -286,6 +290,7 @@ main {
   opacity: 0;
   transform: translateY(12px);
   animation: heroFadeIn 0.85s ease-out 0.1s forwards;
+  text-align: center;
 }
 
 .hero h1 {
@@ -996,6 +1001,9 @@ footer a {
     align-items: flex-start;
     gap: 6px;
   }
+  .nav .mobile-only {
+    display: block;
+  }
   .nav a {
     display: block;
     width: 100%;
@@ -1027,10 +1035,9 @@ footer a {
   .hero-copy {
     width: 100%;
     max-width: 95%;
-    text-align: center;
     padding: 22px 18px;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
-    background: rgba(12, 31, 88, 0.82);
+    background: linear-gradient(90deg, rgba(12, 31, 88, 0) 0%, rgba(12, 31, 88, 0.9) 22%, rgba(12, 31, 88, 0.98) 50%, rgba(12, 31, 88, 0.9) 78%, rgba(12, 31, 88, 0) 100%);
     color: #f5f8ff;
   }
   .hero h1 {
