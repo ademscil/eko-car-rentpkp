@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const open = nav.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.classList.toggle('open', open);
+      // Force display for mobile cases where CSS might be overridden
+      nav.style.display = open ? 'block' : '';
     });
 
     nav.querySelectorAll('a').forEach(link => {
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.classList.remove('open');
+        nav.style.display = '';
       });
     });
   });
